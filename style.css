@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 50px;
+}
+
+.meme-picture { 
+    width: 400px; 
+    height: 230px; 
+    position: relative; 
+    color: white; 
+    overflow: hidden;
+}
+.meme-picture img { 
+    width: 100%;
+}
+
+.topContainer,
+.bottomContainer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.bottomContainer { bottom: 10px; }
