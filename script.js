@@ -4,26 +4,24 @@ function memeGenerator() {
     var datas = [];
     var btn = document.getElementsByTagName("button")[0];
 
-    btn.addEventListener("click", function() {
+    getMemes().then(json => {
+        datas = json.data.memes;
+        btn.addEventListener("click", function () {
+            if (datas) {
+                var meme = loadRandomMeme();
+                displayMeme(meme);
 
-        getMemes().then(json => {
-            datas = json.data.memes;
-            var meme = loadRandomMeme();
-            displayMeme(meme);
+                var topText = document.getElementById("topText");
+                var bottomText = document.getElementById("bottomText");
 
-            var topText = document.getElementById("topText");
-            var bottomText = document.getElementById("bottomText");
+                var topContainer = document.getElementsByClassName("topContainer")[0];
+                var bottomContainer = document.getElementsByClassName("bottomContainer")[0];
 
-            var topContainer = document.getElementsByClassName("topContainer")[0];
-            var bottomContainer = document.getElementsByClassName("bottomContainer")[0];
-
-            topContainer.innerHTML = topText.value;
-            bottomContainer.innerHTML = bottomText.value;
-
-        }).catch(error => console.error(error))
-
-    });
-
+                topContainer.innerHTML = topText.value;
+                bottomContainer.innerHTML = bottomText.value;
+            }
+        });
+    }).catch(error => console.error(error));
 
     async function getMemes() {
         return fetch(memeUrl)
