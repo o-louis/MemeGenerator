@@ -24,15 +24,18 @@ body {
     border-radius: 4px;
     width: 40%;
     height: 60%;
+    display: flex;
+    flex-direction: row;
 }
 
 .meme-picture { 
-    width: 400px; 
-    height: 230px; 
+    width: 40%;
+    height: 40%;
     position: relative; 
     color: white; 
     overflow: hidden;
-    display: inline-block;
+    display: inline-flex;
+    align-self: center;
 }
 .meme-picture img { 
     width: 100%;
