@@ -3,10 +3,25 @@
     font-family: Arial;
     padding: 0;
     margin: 0;
+    border: none;
+}
+html {
+    height: 100%;
 }
 
 body {
-    padding: 50px;
+    padding: 30px;
+    background-color: #acacac;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background-color: white;
+    border-radius: 4px;
+    width: 40%;
+    height: 60%;
 }
 
 .meme-picture { 
@@ -15,6 +30,7 @@ body {
     position: relative; 
     color: white; 
     overflow: hidden;
+    display: inline-block;
 }
 .meme-picture img { 
     width: 100%;
@@ -29,3 +45,10 @@ body {
 }
 
 .bottomContainer { bottom: 10px; }
+
+.settings-container {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+}
