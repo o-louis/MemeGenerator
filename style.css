@@ -1,84 +1,103 @@
 * {
-    box-sizing: border-box;
-    font-family: Arial;
-    padding: 0;
     margin: 0;
+    padding: 0;
     border: none;
     outline: none;
-}
-
-html {
-    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
+    width: 100vw;
     padding: 30px;
-    background-color: #acacac;
+    height: 100vh;
+    display: flex;
     color: white;
-    width: 100%;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    background-color: white;
-    border-radius: 4px;
-    width: 40%;
-    height: 60%;
+    width: 700px;
+    height: 400px;
     display: flex;
-    flex-direction: row;
+    padding: 40px;
+    border-radius: 6px;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.meme-picture { 
-    width: 40%;
-    height: 40%;
-    position: relative; 
+h1 {
+    color: black;
+}
+
+.inner-container {
+    width: 100%;
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 3px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    padding: 12px;
+    width: 80%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+button { 
+    cursor: pointer;
+    padding: 12px;
+    width: 80%;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 2px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.meme-picture {
+    width: 100%;
+    height: 200px;
+    display: block;
     color: white; 
     overflow: hidden;
-    display: inline-flex;
+    position: relative; 
     align-self: center;
+    display: inline-flex;
+    border-radius: 3px;
+    overflow: hidden;
 }
 .meme-picture img { 
+    max-width: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: contain
 }
 
 .topContainer,
 .bottomContainer {
     position: absolute;
     right: 0;
-    left: 0;
+    left: 36%;
     text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+    background-color: black;
+    width: 80px;
 }
 
 .bottomContainer { 
-    bottom: 10px;
-}
-
-.settings-container {
-    display: flex;
-    width: 50%;
-    height: 100%;
-    flex-direction: column;
-    padding: 20px 15px;
-    justify-content: center;
-}
-
-input { 
-    width: 70%;
-    height: 8%;
-    border: 1px solid grey;
-    border-radius: 2px;
-    margin-bottom: 12px;
-    font-size: 15px;
-    padding-left: 3%;
-}
-
-button { 
-    cursor: pointer;
-    padding: 4%;
-    width: 70%;
-    background-color: blueviolet;
-    color: white;
-    border-radius: 2px;
-    font-family: Calibri;
-    font-size: 1em;
+    bottom: 0px;
 }
